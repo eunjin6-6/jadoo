@@ -30,6 +30,7 @@ font-family: "Open Sans", sans-serif;
   width: var(--container);
   margin: 0 auto;
 }
+
 /* 폰트 */
 body{
   font: var(--fz)/var(--lh) "Poppins", sans-serif;
@@ -39,4 +40,56 @@ body{
   font-family: "Poppins", sans-serif;
   */
 }
+
 /* 링크 버튼 */
+
+/* header */
+header{
+  background: 
+  url(../images/header_bg.svg) right top no-repeat,
+  url(../images/header_ellipse.svg) left top no-repeat;
+}
+.top_nav{
+  padding: 47px 0;
+}
+.top_nav > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top_nav.fixed{
+  position: fixed;
+  padding: 20px 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255,255,255,.8);
+  box-shadow: 0 3px 3px rgba(0,0,0,.06);
+}
+
+.top_nav nav{
+  display: flex;
+  gap: 52px;
+}
+nav ul{
+  display: flex;
+  gap: 52px;
+}
+nav .main_menu{
+  margin-right: 34px;
+}
+
+nav .dropdown{
+  position: relative;
+}
+nav .dropdown ul{
+  position: absolute;
+  top: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  display: none;
+}
+
+/* main */
+/* footer */
