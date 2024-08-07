@@ -67,28 +67,65 @@ header{
   box-shadow: 0 3px 3px rgba(0,0,0,.06);
 }
 
+.logo a{
+  width: 116px;
+  height: 35px;
+  background:url(../images/Logo.svg) no-repeat;
+  display: block;
+  text-indent: -9999em;
+}
+.top_nav a{
+  font-family: 'Product Sans Medium Regular';
+  font-size: 17px;
+  color: #212832;
+}
 .top_nav nav{
   display: flex;
-  gap: 52px;
+  align-items: center;
 }
-nav ul{
+.top_nav ul {
   display: flex;
-  gap: 52px;
 }
-nav .main_menu{
-  margin-right: 34px;
+.main_menu{
+  gap:60px;
+  margin-right: 86px;
 }
-
-nav .dropdown{
+.login_links{
+  gap: 50px;
+  margin-right: 42px;
+}
+.login_links a{
+  height: 40px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  display: block;
+  line-height: 40px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.login_links a:hover{
+  border-color: #212832;
+}
+.top_nav .dropdown{
   position: relative;
 }
-nav .dropdown ul{
+.top_nav .dropdown ul{
   position: absolute;
+  right: 0;
   top: 100%;
-  display: flex;
+  padding: 5px;
+  border:1px solid #212832;
   flex-direction: column;
-  gap: 10px;
+  border-radius: 5px;
+  background: var(--white);
   display: none;
+}
+.top_nav .dropdown ul li{
+line-height: 30px;
+padding: 0 15px;
+}
+.top_nav .dropdown ul li:hover a{
+  color: #5E6282;
 }
 
 /* main */
