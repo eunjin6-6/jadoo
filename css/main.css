@@ -367,4 +367,175 @@ header .content .desc p{
   color: #000;
   font-size: 16px;
 }
+
+/* book_a_trip */
+.book_a_trip{
+  display: flex;
+  justify-content: space-between;
+  background: url(../images/book_bg.svg) right top no-repeat;
+}
+.book_a_trip .content{
+  width: 511px;
+}
+.book_a_trip h2{
+  line-height: 65px;
+  margin-bottom: 31px;
+}
+.book_a_trip .pic_of_month{
+  width: 485px;
+  position: relative;
+  margin-top: 80px;
+}
+.steps{
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.steps li{
+  display: flex;
+  gap: 20px;
+}
+.steps .icon{
+  width: 47px;
+  height: 48px;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.steps li:nth-child(1) .icon{
+  background: #F0BB1F;
+}
+.steps li:nth-child(2) .icon{
+  background: #F15A2B;
+}
+.steps li:nth-child(3) .icon{
+  background: #006380;
+}
+.steps .desc{
+  width: 327px; /*없으면 찌그러짐 밀림*/
+}
+.steps .desc h4{
+  line-height: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.steps .desc p{
+  line-height: 1.24;
+}
+.pic_of_month .detail{
+  padding: 20px 24px 30px;
+  background: var(--white);
+  border-radius: 26px;
+  width: 370px;
+  box-sizing: border-box;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0.00);
+}
+.pic_of_month .detail img{
+  margin-bottom: 20px;
+}
+.pic_of_month .detail h4{
+  font-size: 18px;
+  color: #080809;
+  line-height: 1.24;
+  font-weight: 500;
+  margin-bottom: 13px;
+  letter-spacing: 0.015em;
+}
+.pic_of_month .detail p{
+  padding: 2px;
+  line-height: 16px;
+  letter-spacing: -0.005em;
+  color: #84829A;
+}
+.pic_of_month .detail .date{
+  border-right: 1px solid #84829A;
+  display: inline-block; /*p의 lg 값만큼 크기 먹으려고*/
+  padding-right: 5px;
+  margin-right: 13px;
+}
+.pic_of_month .detail ul{
+  display: flex;
+  gap: 18px;
+  margin: 20px 0 30px;
+}
+.pic_of_month .detail ul li {
+  width: 36px;
+  height: 36px;
+  background: #F5F5F5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.pic_of_month .detail ul li a{
+  color: #84829A; /*링크의 글자색은 부모에 주면 안되고 a에 직접줘야함*/
+}
+.pic_of_month .people{
+  display: flex;
+  justify-content: space-between;
+}
+.pic_of_month .people i{
+  margin-right: 15px;
+}
+.pic_of_month .people > i{
+  color: #4152CA;
+}
+.ongoing{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: var(--white);
+  padding: 20px 25px 22px 18px;
+  box-sizing: border-box;
+  width: 263px;
+  border-radius: 18px;
+  position: absolute;
+  left: 222px;
+  bottom: 52px;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0.00);
+}
+.desc h5{
+  font-size: 14px;
+  line-height: 1.24;
+  color: #84829A;
+  margin-bottom: 6px;
+}
+
+.ongoing h4{
+  color: #080809;
+  font-size: 18px;
+  line-height: 1.24;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.ongoing p{
+  font-size: 14px;
+  line-height: 1.24;
+  letter-spacing: -0.055em;
+  color: #080809;
+  font-weight: 500;
+}
+.ongoing p .percent{
+  color: #8A79DF;
+  margin-right: 4px;
+}
+.desc .progress_bar{
+  margin-top: 10px;
+  position: relative;
+  width: 156px;
+  height: 5px;
+  background: #f5f5f5;
+  border-radius: 2.5px;
+}
+.desc .progress_bar .bar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 5px; /*bottom값으로 펴줘도됨*/
+  background: #8A79DF;
+  border-radius: 2.5px;
+}
 /* footer */
