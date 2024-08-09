@@ -538,4 +538,111 @@ header .content .desc p{
   background: #8A79DF;
   border-radius: 2.5px;
 }
+
+/*testimonials*/
+.testimonials{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.testimonials .header{
+  width: 408px;
+}
+.testimonials .header .sec_tt{
+  margin-bottom: 82px;
+}
+.testimonials .pager{
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+.testimonials .pager a{
+  background: #E5E5E5;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  text-indent: -9999em;
+  /* display: inline-block; 없어도되나? */
+}
+.testimonials .pager .active{
+  background: #39425D;
+}
+.testimonials_list{
+  margin-top: 25px;
+  width: 589px;
+  height: 356px;
+  position: relative;
+  
+}
+.testimonials_list li{
+  width: 504px;
+  position: absolute;
+  top: 44px;
+  left: 123px;
+  padding: 28px 68px 34px 34px;
+  box-sizing: border-box;
+  background: var(--white);
+  border: 2px solid #F7F7F7;
+  border-radius: 10px;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.02), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0.00);
+  transition: .3s;
+}
+.testimonials_list li.active{
+  top: 0;
+  left: 0;
+  background: var(--white);
+  border: none;
+  z-index: 1;
+}
+.testimonials_list li img{
+  position: absolute;
+  left: -37px;
+  top: -34px;
+}
+.testimonials_list li blockquote{
+  line-height: 32px;
+  font-weight: 500;
+}
+.testimonials_list li blockquote p::before{
+  content: '"';
+}
+.testimonials_list li blockquote p::after{
+  content: '"';
+}
+.testimonials_list li small{
+  margin-top: 34px;
+  display: block; /*마진안먹어서?*/
+  font-size: 14px;
+  line-height: 21px;
+}
+.testimonials_list li small span{
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 600;
+  display: block; /*한줄씩 쓰려고*/
+}
+
+.testimonials .pagination{
+  position: absolute;
+  left: calc(100% + 32px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonials .pagination button{
+  cursor: pointer;
+  color: #BCB7C2;
+  transition: .3s;
+}
+.testimonials .pagination button:hover {
+  color: #3E2E4D;
+}
+
+
+
+
 /* footer */
