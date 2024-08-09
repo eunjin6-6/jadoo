@@ -10,7 +10,11 @@ let partnerListCount = partnerList.querySelectorAll('.partner_list li').length;
 let partnerListLeft = 0;
 let partnerListTotalWidth = partnerListWidth*partnerListCount;
 let animation;
-
+let bookATrip = document.querySelector('.book_a_trip');
+let bookATripOST = bookATrip.offsetTop - 300;
+let progressBar = bookATrip.querySelector('.progress_bar');
+let bar = progressBar.querySelector('.progress_bar .bar');
+let onGoningPercent = bookATrip.querySelector('.ongoing .percent');
 
 partnerList.style.width = partnerListTotalWidth + 'px';
 
@@ -92,3 +96,29 @@ paginationDown.addEventListener('click',()=>{
 paginationUp.addEventListener('click',()=>{
     showTestimonial(currentIdx - 1);
   });
+
+//스크롤이벤트
+  window.addEventListener('scroll',()=>{
+    let scrollAmt = window.scrollY;
+    if(scrollAmt >= bookATripOST){
+      if(!bookATrip.classList.contains('active')){
+        bookATrip.classList.add('active');
+        onGoingNumAnimation();
+      }
+      
+    }
+  });
+
+  //progressbar 채워지기
+  function onGoingNumAnimation(){
+    let targetNum = Number(bar.getAttribute('data-rate'));
+    let num = 0;
+    let animation =  setInterval(() => {
+      num += 1;
+      bar.style.width = num + '%';
+      onGoningPercent.innerHTML = num + '%';
+      if (num === targetNum){
+        clearInterval(animation);
+      }
+    }, 50);
+  }
