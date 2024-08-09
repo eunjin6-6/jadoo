@@ -4,6 +4,33 @@ let paginationUp = document.querySelector('.pagination .up')
 let paginationDown = document.querySelector('.pagination .down')
 let currentIdx = 0;
 let testimonialCount = testimonialsList.length;
+let partnerList = document.querySelector('.partner_list');
+let partnerListWidth = 234;
+let partnerListCount = partnerList.querySelectorAll('.partner_list li').length;
+let partnerListLeft = 0;
+let partnerListTotalWidth = partnerListWidth*partnerListCount;
+let animation;
+
+
+partnerList.style.width = partnerListTotalWidth + 'px';
+
+function movePartnerList(){
+  //partnerListLeft = partnerListLeft - 5;
+  partnerListLeft -= 2;
+  if(partnerListLeft === -partnerListTotalWidth/2){
+    partnerListLeft = 0;
+  }
+  partnerList.style.left = partnerListLeft + 'px';
+  animation = requestAnimationFrame(movePartnerList);
+}
+requestAnimationFrame(movePartnerList);
+
+partnerList.addEventListener('mouseenter',()=>{
+  cancelAnimationFrame(animation);
+});
+partnerList.addEventListener('mouseleave',()=>{
+  requestAnimationFrame(movePartnerList);
+});
 
 
 /*
@@ -43,7 +70,7 @@ function showTestimonial(num){
   num = (3+3) % 3 = 0
   nm3 = num 0 으로 바뀜
   */
-
+ 
   //모든 testimonialsLists에서 active를 제거하고 
   //클릭한 그요소의 인덱스번호에 해당하는 list에 active 추가
   for(let testimonial of testimonialsList){
