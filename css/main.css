@@ -36,6 +36,15 @@ main>section{
 .txt_center{
   text-align: center;
 }
+.hidden{
+  position: absolute;
+  left: 0;
+  top: -9999em;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 /* 폰트 */
 body{
   font: var(--fz)/var(--lh) "Poppins", sans-serif;
