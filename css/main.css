@@ -542,7 +542,7 @@ header .content .desc p{
 /*testimonials*/
 .testimonials{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
 }
 .testimonials .header{
@@ -551,34 +551,17 @@ header .content .desc p{
 .testimonials .header .sec_tt{
   margin-bottom: 82px;
 }
-.testimonials .pager{
-  display: flex;
-  gap: 26px;
-  align-items: center;
-}
-.testimonials .pager a{
-  background: #E5E5E5;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  text-indent: -9999em;
-  /* display: inline-block; 없어도되나? */
-}
-.testimonials .pager .active{
-  background: #39425D;
-}
 .testimonials_list{
   margin-top: 25px;
   width: 589px;
   height: 356px;
   position: relative;
-  
 }
 .testimonials_list li{
-  width: 504px;
   position: absolute;
-  top: 44px;
-  left: 123px;
+  width: 504px;
+  top: 123px;
+  left: 44px;
   padding: 28px 68px 34px 34px;
   box-sizing: border-box;
   background: var(--white);
@@ -621,7 +604,22 @@ header .content .desc p{
   font-weight: 600;
   display: block; /*한줄씩 쓰려고*/
 }
-
+.testimonials .pager{
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+.testimonials .pager a{
+  background: #E5E5E5;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  text-indent: -9999em;
+  /* display: inline-block; 없어도되나? */
+}
+.testimonials .pager .active{
+  background: #39425D;
+}
 .testimonials .pagination{
   position: absolute;
   left: calc(100% + 32px);
@@ -671,5 +669,85 @@ header .content .desc p{
   filter: grayscale(0);
 }
 
+/*Subscribe*/
+.subscribe{
+  background: url(../images/subscribe_bg1.svg) bottom left no-repeat,
+  url(../images/subscribe_bg2.svg) top right no-repeat #F7F4FF;
+  border-radius: 129px 20px 20px 20px;
+  padding: 79px 156px 73px;
+  box-sizing: border-box;
+  position: relative;
+}
+.subscribe::after{
+  content: '';
+  width: 153px;
+  height: 166px;
+  position: absolute;
+  background: url(../images/subscribe_bg3.svg) no-repeat;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 50%);
+  z-index: -1;
+}
+.subscribe h2{
+  font-size: 33px;
+  line-height: 54px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 74px;
+}
+.subscribe form{
+  width: 625px;
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.subscribe form .field{
+  background: var(--white);
+  width: 420px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  gap: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.subscribe form .field input{
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0;
+}
 
+.subscribe form button{
+  font-family: "Open Sans", sans-serif;
+  width: 180px;
+  color: var(--white);
+  background: linear-gradient(#FF946D, #FF7D68);
+  border-radius: 10px;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe .decoration{
+  position: absolute;
+  right: -20px;
+  top: -13px;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg,#5E3BE1,#747DEF);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subscribe .decoration img{
+  width: 34px;
+  height: 30px;
+  transform: rotate(-30deg);
+}
 /* footer */
